@@ -13,7 +13,7 @@ Write a Jenkins pipeline to build and test a Java application built using Gradle
     * integration tests
 * Integration tests should run on main branch only (not on PRs)
 * Integration tests should time out after 30 minutes
-* Credentials are required by all stages. Credentials id is `credentials` (secret text)
+* Credentials are required by all stages. Credentials id is `credentials` (secret text) and should be added as a flag to the gradle command (see below)
 * Notifications should be sent to the `builds` slack channel when a build has failed, has test failures or is now fixed
 * Option to send notification to a different slack channel
 * How would we refactor into a shared pipeline?
@@ -22,8 +22,9 @@ Write a Jenkins pipeline to build and test a Java application built using Gradle
 
 ### Supplementary info
 
-* Suitable k8s baes agent can be used with a label of `gradle`
-* To run gradle, the command line is: `./gradlew some_command --no-daemon someflags`
+* Shared-library folder would normally be in a different repo. Assume this library is implicitely loaded
+* Suitable k8s base agent can be used with a label of `gradle`
+* To run gradle, the command line is: `./gradlew some_command --no-daemon -P`
 * Gradle commands
     * build - `build`
     * unit test - `test`
