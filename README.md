@@ -16,7 +16,6 @@ Write a Jenkins pipeline to build and test a Java application built using Gradle
 * Credentials are required by all stages. Credentials id is `credentials` (secret text)
 * Notifications should be sent to the `builds` slack channel when a build has failed, has test failures or is now fixed
 * Option to send notification to a different slack channel
-
 * How would we refactor into a shared pipeline?
 * How would this pipeline handle custom post success behaviour?
 
