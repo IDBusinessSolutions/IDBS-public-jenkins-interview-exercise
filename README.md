@@ -24,7 +24,7 @@ Write a Jenkins pipeline to build and test a Java application built using Gradle
 
 * Shared-library folder would normally be in a different repo. Assume this library is implicitely loaded
 * Suitable k8s base agent can be used with a label of `gradle`
-* To run gradle, the command line is: `./gradlew some_command --no-daemon -P`
+* To run gradle, the command line is: `./gradlew some_command --no-daemon -Pcredential=credentialValue`
 * Gradle commands
     * build - `build`
     * unit test - `test`
