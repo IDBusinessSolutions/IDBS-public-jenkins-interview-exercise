@@ -23,9 +23,10 @@ Write a Jenkins pipeline to build and test a Java application built using Gradle
 
 ### Supplementary info
 
-* Suitable agent can be used with a label of `gradle`
+* Suitable k8s baes agent can be used with a label of `gradle`
 * To run gradle, the command line is: `./gradlew some_command --no-daemon someflags`
 * Gradle commands
     * build - `build`
     * unit test - `test`
     * integration test - `it`
+* slack notifications sent as `slackSend message: message, color: colour, channel: slackChannel`
